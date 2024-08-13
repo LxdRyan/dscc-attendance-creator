@@ -1,8 +1,0 @@
-attendance.py
-setup.py
-attendance.egg-info/PKG-INFO
-attendance.egg-info/SOURCES.txt
-attendance.egg-info/dependency_links.txt
-attendance.egg-info/entry_points.txt
-attendance.egg-info/requires.txt
-attendance.egg-info/top_level.txt
