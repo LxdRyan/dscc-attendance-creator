@@ -1,5 +1,6 @@
 from jinja2 import Environment, PackageLoader, select_autoescape
 import click
+import os
 import time
 
 
@@ -76,19 +77,21 @@ def cli():
     )
     video = input("Attendance Video URL: ")
 
-    for i in "attendance", "end":
-        with open(f"output/{i}_{course[0]}_{date}_{lesson_time}.txt", "w") as f:
+    try:
+        os.mkdir("output")
+    except FileExistsError:
+        pass
+    
+    for name, template in {"attendance": attendance, "end": end}.items():
+        with open(f"output/{name}_{course[0]}_{date}_{lesson_time}.txt", "w") as f:
             f.write(
-                eval(
-                    i
-                    + """.render(
-                    date=date,
-                    lesson_time=lesson_time,
-                    course=course,
-                    lesson_type=lesson_type,
-                    location=location,
-                    ic=ic,
-                    people=people,
-                    video=video,)"""
-                )
+                template.render(
+                date=date,
+                lesson_time=lesson_time,
+                course=course,
+                lesson_type=lesson_type,
+                location=location,
+                ic=ic,
+                people=people,
+                video=video,)
             )
