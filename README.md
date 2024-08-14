@@ -16,5 +16,7 @@ Ensure you have Python (and pip) installed.
 To use, enter `attendance create` in a terminal and follow the prompts to input details.
 ### Config
 To use, enter `attendance config` followed by the options for editing the config.
+
 e.g. To change the default rank to _CPL_, use `attendance config --rank CPL`.
-Multiple configs can be edited at the same time, e.g. `attendance config --rank CPL --batch 04/24`
+
+Multiple configs can be edited at the same time, e.g. `attendance config --rank CPL --batch 04/24`.
