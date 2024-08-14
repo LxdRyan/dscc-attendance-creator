@@ -5,10 +5,22 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "attendance"
 version = "1.0.0"
-description = "CLI application to create DSCC NTU attendance messages"
-readme = "README.md"
-authors = [{ name = "Ryan", email = "ryanxdlee@gmail.com" }]
 dependencies = ["click >= 8.1.0", "jinja2"]
+requires-python = ">=3.7"
+authors = [{ name = "Ryan", email = "ryanxdlee@gmail.com" }]
+description = "CLI application to create DSCC NTU WLP attendance messages"
+readme = "README.md"
+classifiers = [
+    "Natural Language :: English",
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    ]
+
+[project.urls]
+Homepage = "https://github.com/LxdRyan/dscc-attendance-creator"
+Repository = "https://github.com/LxdRyan/dscc-attendance-creator.git"
+Issues = "https://github.com/LxdRyan/dscc-attendance-creator/issues"
 
 [project.scripts]
 attendance = "attendance.__main__:cli"
