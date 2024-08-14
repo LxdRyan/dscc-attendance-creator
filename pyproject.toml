@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools >= 71.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "attendance"
+version = "1.0.0"
+description = "CLI application to create DSCC NTU attendance messages"
+readme = "README.md"
+authors = [{ name = "Ryan", email = "ryanxdlee@gmail.com" }]
+dependencies = ["click >= 8.1.0", "jinja2"]
+
+[project.scripts]
+attendance = "attendance.__main__:cli"

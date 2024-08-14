@@ -3,5 +3,6 @@ __pycache__
 .ruff_cache
 .venv
 .vscode
-attendance.egg_info
+attendance.egg-info
 output
+dist

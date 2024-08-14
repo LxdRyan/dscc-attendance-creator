@@ -1,5 +1,6 @@
 from jinja2 import Environment, PackageLoader, select_autoescape
 import click
+import contextlib
 import os
 import time
 
@@ -56,7 +57,7 @@ def cli():
     def get_type():
         lesson_types = {"lec": "lecture", "tut": "tutorial", "lab": "lab"}
         lesson_type = input("Type (Lecture, Tutorial, Lab): ").lower()
-        if lesson_type in lesson_types.keys():
+        if lesson_type in lesson_types:
             return lesson_types[lesson_type].title()
         elif lesson_type in lesson_types.values():
             return lesson_type.title()
@@ -73,15 +74,16 @@ def cli():
     location = input("Location: ")
     ic = "PTE " + input("IC: ")
     people = list(
-        map(lambda x: "PTE " + x, input("People (semicolon separated): ").split("; "))
+        map(
+            lambda x: f"PTE {x}",
+            input("People (semicolon separated): ").split("; "),
+        )
     )
     video = input("Attendance Video URL: ")
 
-    try:
+    with contextlib.suppress(FileExistsError):
         os.mkdir("output")
-    except FileExistsError:
-        pass
-    
+
     for name, template in {"attendance": attendance, "end": end}.items():
         with open(f"output/{name}_{course[0]}_{date}_{lesson_time}.txt", "w") as f:
             f.write(
