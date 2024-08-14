@@ -19,8 +19,4 @@ To use, enter `attendance config` followed by the options for editing the config
 
 e.g. To change the default rank to _CPL_, use `attendance config --rank CPL`.
 
-<<<<<<< HEAD
 Multiple configs can be edited at the same time, e.g. `attendance config --rank CPL --batch 04/24`.
-=======
-Multiple configs can be edited at the same time, e.g. `attendance config --rank CPL --batch 04/24`
->>>>>>> 8cc294a2d9ce82af6bc59159ab0882526f260159
