@@ -1,5 +1,6 @@
 {
-    "rank": "PTE",
-    "batch": "03/24",
-    "folder": "https://drive.google.com/drive/folders/1tpzbKxi94M8DD-cUD1Q0I59US1ZdwTLK"
+    "output_folder": "output",
+    "rank": "CPL",
+    "batch": "04/25",
+    "drive_folder": "https://drive.google.com/drive/folders/1tpzbKxi94M8DD-cUD1Q0I59US1ZdwTLK"
 }

@@ -1,1 +1,1 @@
-Good {{ "morning" if lesson_time|int < 1200 else "afternoon" if lesson_time|int < 1700 else "evening" }} commanders, {{ course[0] }} {{ lesson_type }} has ended for {{ people[0] if people|length == 1 else people[:-1]|join(", ") ~ " and " ~ people[-1] }}.
+Good {{ "morning" if end_time|int < 1200 else "afternoon" if end_time|int < 1700 else "evening" }} commanders, {{ course[0] }} {{ lesson_type }} has ended for {{ people[0] if people|length == 1 else people[:-1]|join(", ") ~ " and " ~ people[-1] }}.
