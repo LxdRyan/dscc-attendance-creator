@@ -2,19 +2,23 @@ from jinja2 import Environment, PackageLoader, select_autoescape
 import click
 import contextlib
 import os
-from .get_config import get_config
+from .config import load_config
 from .get import get_date, get_time, get_course, get_type
 
 
-@click.command
+@click.group
 def cli():
+    pass
+
+@cli.command
+def create():
     env = Environment(
         loader=PackageLoader("attendance"), autoescape=select_autoescape()
     )
     attendance = env.get_template("attendance_template.jinja")
     end = env.get_template("end_template.jinja")
 
-    config = get_config()
+    config = load_config()
 
     date = get_date()
     start_time = get_time("Start")
