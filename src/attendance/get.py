@@ -1,5 +1,6 @@
 import time
 
+
 def get_date():
     date = input("Date (DDMMYY): ")
     try:
@@ -10,15 +11,17 @@ def get_date():
     else:
         return date
 
-def get_time():
-    lesson_time = input("Time (HHMM): ")
+
+def get_time(time_type):
+    return_time = input(f"Lesson {time_type} Time (HHMM): ")
     try:
-        time.strptime(lesson_time, "%H%M")
+        time.strptime(return_time, "%H%M")
     except ValueError:
         print("Time must be in HHMM format")
         return get_time()
     else:
-        return lesson_time
+        return return_time
+
 
 def get_course():
     courses = {
@@ -40,6 +43,7 @@ def get_course():
         )
         get_course()
     return code, name
+
 
 def get_type():
     lesson_types = {"lec": "lecture", "tut": "tutorial", "lab": "lab"}
