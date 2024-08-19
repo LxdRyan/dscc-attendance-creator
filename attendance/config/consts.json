@@ -4,12 +4,16 @@
     "batch": "03/24",
     "drive_folder": "https://drive.google.com/drive/folders/1tpzbKxi94M8DD-cUD1Q0I59US1ZdwTLK",
     "courses": {
+        "CC0001": "Inquiry & Communication in an Interdisciplinary World",
+        "CC0003": "Ethics & Civics in a Multicultural World",
+        "CC0002": "Navigating the Digital World",
+        "CC0005": "Healthy Living & Wellbeing",
+        "EG1001": "Engineers in Society",
+        "MH1805": "Calculus",
+        "MH1812": "Discreet Mathematics",
         "SC1003": "Introduction to Computational Thinking & Programming",
         "SC1004": "Linear Algebra for Computing",
         "SC1005": "Digital Logic",
-        "SC1013": "Physics For Computing",
-        "EG1001": "Engineers in Society",
-        "CC0003": "Ethics & Civics in a Multicultural World",
-        "CC0005": "Healthy Living & Wellbeing"
+        "SC1013": "Physics For Computing"
     }
 }

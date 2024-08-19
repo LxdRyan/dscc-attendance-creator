@@ -1,7 +1,7 @@
 import json
 import importlib.resources
 
-consts_file = importlib.resources.files("attendance").joinpath("consts.json")
+consts_file = importlib.resources.files(__package__).joinpath("consts.json")
 
 
 class ConstsDict(dict):
