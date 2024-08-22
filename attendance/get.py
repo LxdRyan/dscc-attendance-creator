@@ -1,15 +1,15 @@
 import time
 
 
-def get_date():
-    date = input("Date (DDMMYY): ")
-    try:
-        time.strptime(date, "%d%m%y")
-    except ValueError as e:
-        print("Date must be in DDMMYY format", e)
-        return get_date()
-    else:
-        return date
+# def get_date():
+#     date = input("Date (DDMMYY): ")
+#     try:
+#         time.strptime(date, "%d%m%y")
+#     except ValueError as e:
+#         print("Date must be in DDMMYY format", e)
+#         return get_date()
+#     else:
+#         return date
 
 
 def get_time(time_type):

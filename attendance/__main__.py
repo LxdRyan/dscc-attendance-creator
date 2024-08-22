@@ -2,9 +2,10 @@ from jinja2 import Environment, PackageLoader, select_autoescape
 import click
 import contextlib
 import os
+import time
 from re import split as re_split
 from .config.consts import load_consts, edit_consts
-from .get import get_date, get_time, get_course, get_type
+from .get import get_time, get_course, get_type
 
 
 @click.group
@@ -24,13 +25,14 @@ def create():
 
     consts = load_consts()
 
-    date = get_date()
+    date = time.strftime("%d%m%y", time.localtime())
     start_time = get_time("Start")
     end_time = get_time("End")
     course = get_course()
     lesson_type = get_type()
     location = input("Location: ")
-    ic = f"{consts.rank} {input('IC: ')}"
+    # ic = f"{consts.rank} {input('IC: ')}"
+    ic = "PTE Joel Loh Quan Yu"
     people = list(
         map(
             lambda x: f"{consts.rank} {x}",
